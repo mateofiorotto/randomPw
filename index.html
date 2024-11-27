@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random PW Generator; Mateo Fiorotto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="checkbox"] {
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-b from-purple-950 to-slate-950 text-white">
+
+        <section class="flex items-center flex-col justify-center w-100 h-screen">
+            <h1 class="mb-8 text-5xl font-bold uppercase text-center">Generate random password</h1>
+            <form id="form">
+                <div class="text-2xl m-8">
+                    <label class="mr-5" -for="length">Password length (3-20 chars):</label>
+                    <input class="bg-transparent outline-none border-b-2 border-b-indigo-50" type="number" id="length"
+                        name="length">
+                </div>
+
+                <div class="text-2xl m-8 flex align-middle items-center">
+                    <label class="mr-5" for="special_chars">Special Characters?</label>
+                    <input class="checked:bg-blue-500" type="checkbox" id="special_chars" name="special_chars">
+
+                </div>
+
+                <div class="mt-16">
+                    <button class="block m-auto text-xl font-bold uppercase transition-colors bg-orange-500 hover:bg-orange-700 px-16 py-5 rounded-full"
+                        type="submit">Generate</button>
+                </div>
+            </form>
+
+            <div class="hidden mb-3 mt-10" id="show">
+                <h2 class="text-center text-3xl mb-5">You password is:</h2>
+                <p class="hidden">Here will show the generated PW</p>
+                <p class="text-center text-xl" id="pw-p"></p>
+            </div>
+
+            <div class="hidden mb-3 mt-10" id="errors">
+                <p class="hidden">Here will show the errors</p>
+                <p class="text-xl text-red-500" id="error-p"></p>
+            </div>
+
+            <div class="mt-24 flex gap-5 text-xl align-middle justify-center items-center">
+                <p>Dev By Mateo Fiorotto</p>
+                <a class="hover:text-orange-500 transition-colors" href="https://github.com/mateofiorotto" target="_blank" rel="no-referrer noopener"><i class="text-3xl fa-brands fa-github"></i></a>
+                 <a class="hover:text-orange-500 transition-colors" href="https://www.linkedin.com/in/mateo-fiorotto" target="_blank" rel="no-referrer noopener"><i class="text-3xl fa-brands fa-linkedin"></i></a>
+            </div>
+        </section>
+
+    <script src="main.js" defer></script>
+</body>
+
+</html>
